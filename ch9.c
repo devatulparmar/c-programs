@@ -1,22 +1,25 @@
-
+// print address (house no, city name, pin code) of 5 people
 #include <stdio.h>
 #include <string.h>
 
-struct student {
+typedef struct student {
     int roll;
     float cgpa;
     char name[100];
-};
+} stud;
 
 void printStructureValue(struct student s1);
 
 int main(){
+    stud s2 = {10, 7.5, "WELTEC"};
     struct student s1 = {10, 7.5, "WELTEC"};
 
     s1.roll = 30;
+    s2.roll = 125;
     printStructureValue(s1);
 
     printf("New Roll No is : %d\n", s1.roll);
+    printf("New Roll No is : %d\n", s2.roll);
 //    struct student s2 = {20, 9.5, "HELLO"};
 //    struct student s3 = {30, 5.5, "WORLD"};
 //
