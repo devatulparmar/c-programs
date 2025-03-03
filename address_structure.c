@@ -9,9 +9,14 @@ struct address {
     int pinCode;
 };
 
+void _printAdd(struct address adds[100]){
+    for(int i = 0; i < 2; i++){
+        printf("Address is: %d, %s %d\n", adds[i].hNo, adds[i].city,adds[i].pinCode);
+    }
+}
+
 int main(){
     struct address adds[100];
-
     printf("Enter Address\n");
     for(int i = 0; i < 2; i++){
         printf("Enter House No:\n");
@@ -22,12 +27,7 @@ int main(){
         scanf("%d", &adds[i].pinCode);
         printf("-----------------------------------\n");
     }
-
-    for(int i = 0; i < 2; i++){
-        printf("Enter House No: %d\n", adds[i].hNo);
-        printf("Enter House No: %s\n", adds[i].city);
-        printf("Enter House No: %d\n", adds[i].pinCode);
-        printf("-----------------------------------\n");
-    }
+    _printAdd(adds);
     return 0;
 }
+
